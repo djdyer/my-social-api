@@ -9,12 +9,15 @@ const userSchema = new Schema(
     username: {
       type: String,
       required: true,
-
+      // - Unique
+      // - Trimmed
       default: "Unnamed user",
     },
     email: {
       type: String,
       required: true,
+      // - Unique
+      // - Must match a valid email address (look into Mongoose's matching validation)
     },
   },
   {
@@ -27,20 +30,7 @@ const userSchema = new Schema(
 
 module.exports = userSchema;
 
-// - String
-// - Unique
-// - Required
-// - Trimmed
-
-// - `email`
-
-// - String
-// - Required
-// - Unique
-// - Must match a valid email address (look into Mongoose's matching validation)
-
 // - `thoughts`
-
 // - Array of `_id` values referencing the `Thought` model
 
 // - `friends`

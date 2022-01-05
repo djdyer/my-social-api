@@ -6,11 +6,10 @@ const reactionSchema = new Schema(
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
-    reactionText: {
+    reactionBody: {
       type: String,
       required: true,
       maxlength: 280,
-      minlength: 1,
       default: "Unnamed reaction",
     },
     username: {
@@ -33,22 +32,6 @@ const reactionSchema = new Schema(
 module.exports = reactionSchema;
 
 // **Reaction** (SCHEMA ONLY)
-
-// - `reactionId`
-
-//   - Use Mongoose's ObjectId data type
-//   - Default value is set to a new ObjectId
-
-// - `reactionBody`
-
-//   - String
-//   - Required
-//   - 280 character maximum
-
-// - `username`
-
-//   - String
-//   - Required
 
 // - `createdAt`
 //   - Date
