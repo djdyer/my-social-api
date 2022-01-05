@@ -33,6 +33,8 @@ module.exports = reactionSchema;
 
 // **Reaction** (SCHEMA ONLY)
 
+// Subdocuments Activity 17 - Department js
+
 // - `createdAt`
 //   - Date
 //   - Set default value to the current timestamp
