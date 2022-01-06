@@ -2,6 +2,16 @@ const connection = require("../config/connection");
 const { Thought, User } = require("../models");
 // const { getRandomUser, getRandomThoughts } = require("./data");
 
+// Seed data
+// pull in models needed (Users, Thoughts)
+// Delete all users and thoughts
+// data.js
+// array of 3 users
+// empty array of thoughts
+// empty array of friends
+// array of 3 thoughts
+// empty array of reactions
+
 connection.on("error", (err) => err);
 
 connection.once("open", async () => {

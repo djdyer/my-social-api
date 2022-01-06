@@ -1,3 +1,5 @@
+// make this an object to include email for each user!
+
 const usernames = [
   "C_los247",
   "Daniel_s0n",

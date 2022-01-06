@@ -1,16 +1,12 @@
-const { Schema, Types } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
   {
-    userId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
     username: {
       type: String,
       required: true,
       unique: true,
-      // { $trim: { input: <string>,  chars: <string> } },
+      trim: true,
     },
     email: {
       type: String,
@@ -18,46 +14,32 @@ const userSchema = new Schema(
       match: /.+\@.+\..+/,
       unique: true,
     },
-    thoughts: {
-      type: Schema.Types.ObjectId,
-      ref: "thoughts",
-    },
+    thoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "thought",
+      },
+    ],
+    friends: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "user",
+      },
+    ],
   },
   {
     toJSON: {
-      // virtuals: true,
-      getters: true,
+      virtuals: true,
     },
-    id: false,
   }
 );
 
-// Create a virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
-userSchema
-  .virtual("friendCount")
-
-  // Getter
-  .get(function () {
-    // return `${this.first} ${this.last}`;
-  });
-
-// Setter to set the first and last name
-// .set(function (v) {
-//   const first = v.split(' ')[0];
-//   const last = v.split(' ')[1];
-//   this.set({ first, last });
-// });
-
-friendCount.length;
+// Virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
+userSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
+});
 
 // Initialize our User model
-// const User = model("user", userSchema);
+const User = model("user", userSchema);
 
-module.exports = userSchema;
-
-// - `thoughts`
-// - Array of `_id` values referencing the `Thought` model
-
-// - `friends`
-// - Array of `_id` values referencing the `User` model (self-reference)
-// ref: user model
+module.exports = User;

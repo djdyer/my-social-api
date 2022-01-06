@@ -5,45 +5,38 @@ const {
   createThought,
   updateThought,
   deleteThought,
+  addReaction,
+  deleteReaction,
 } = require("../../controllers/thoughtController.js");
 
-// /api/thoughts
+// getting all thoughts / creating a thought
 router.route("/").get(getThoughts).post(createThought);
+// create the thought first
+// find the user by username, or userId and push the thought in there
 
-// /api/thoughts/:thoughtId
-router
-  .route("/:thoughtId")
-  .get(getSingleThought)
-  .put(updateThought)
-  .delete(deleteThought);
-
-module.exports = router;
-
-// **`/api/thoughts`**
-
-// - `GET` to get all thoughts
-
-// - `GET` to get a single thought by its `_id`
-
-// - `POST` to create a new thought (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
-
-// ```json
-// // example data
+// example data
 // {
 //   "thoughtText": "Here's a cool thought...",
 //   "username": "lernantino",
 //   "userId": "5edff358a0fcb779aa7b118b"
 // }
-// ```
+
+// get a single thought / delete a thought
+router.route("/:thoughtId").get(getSingleThought).delete(deleteThought);
 
 // - `PUT` to update a thought by its `_id`
 
-// - `DELETE` to remove a thought by its `_id`
+// Add thought to user
+router.route("/:userId/thoughts").post(addThought);
 
-// ---
+// Delete thought from user
+router.route("/:userId/thoughts/:thoughtId").delete(deleteThought);
+// BONUS: Remove a thought's associated reactions when deleted.
 
-// **`/api/thoughts/:thoughtId/reactions`**
+// Add a reaction to thought
+router.route("/:thoughtId/reaction/:reactionId").post(addReaction);
 
-// - `POST` to create a reaction stored in a single thought's `reactions` array field
+// Delete a reaction from thought
+router.route("/:thoughtId/reaction/:reactionId").delete(deleteReaction);
 
-// - `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
+module.exports = router;

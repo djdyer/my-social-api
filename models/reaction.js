@@ -10,7 +10,6 @@ const reactionSchema = new Schema(
       type: String,
       required: true,
       maxlength: 280,
-      default: "Unnamed reaction",
     },
     username: {
       type: String,
@@ -19,6 +18,8 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+      // get:
+      // - Use a getter method to format the timestamp on query
     },
   },
   {
@@ -30,16 +31,3 @@ const reactionSchema = new Schema(
 );
 
 module.exports = reactionSchema;
-
-// **Reaction** (SCHEMA ONLY)
-
-// Subdocuments Activity 17 - Department js
-
-// - `createdAt`
-//   - Date
-//   - Set default value to the current timestamp
-//   - Use a getter method to format the timestamp on query
-
-// **Schema Settings**:
-
-// This will not be a model, but rather will be used as the `reaction` field's subdocument schema in the `Thought` model.
