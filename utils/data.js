@@ -1,4 +1,4 @@
-const users = [
+const seedUsers = [
   {
     username: "Carlos Avalos",
     email: "carlos.avalos@gmail.com",
@@ -61,7 +61,7 @@ const users = [
   },
 ];
 
-const thoughts = [
+const seedThoughts = [
   {
     thoughtText:
       "This damn pandemic has gone on long enough! Get vaccinated you idiots!",
