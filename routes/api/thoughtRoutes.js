@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const {
   getThoughts,
   getSingleThought,
@@ -14,20 +15,15 @@ router.route("/").get(getThoughts).post(createThought);
 // create the thought first
 // find the user by username, or userId and push the thought in there
 
-// example data
-// {
-//   "thoughtText": "Here's a cool thought...",
-//   "username": "lernantino",
-//   "userId": "5edff358a0fcb779aa7b118b"
-// }
-
-// get a single thought / delete a thought
-router.route("/:thoughtId").get(getSingleThought).delete(deleteThought);
-
-// - `PUT` to update a thought by its `_id`
+// get a single thought / update a thought/ delete a thought
+router
+  .route("/:thoughtId")
+  .get(getSingleThought)
+  .put(updateThought)
+  .delete(deleteThought);
 
 // Add thought to user
-router.route("/:userId/thoughts").post(addThought);
+router.route("/:userId/thoughts").post(createThought);
 
 // Delete thought from user
 router.route("/:userId/thoughts/:thoughtId").delete(deleteThought);

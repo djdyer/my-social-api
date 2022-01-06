@@ -12,16 +12,9 @@ const {
 
 // getting all users / creating a user
 router.route("/").get(getUsers).post(createUser);
-// json
-// example data
-// {
-//   "username": "lernantino",
-//   "email": "lernantino@gmail.com"
-// }
 
 // get a single user / delete a user / update a user by id
 router.route("/:userId").get(getSingleUser).put(updateUser).delete(deleteUser);
-
 // BONUS: Remove a user's associated thoughts when deleted.
 
 // Add a friend to user

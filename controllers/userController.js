@@ -48,7 +48,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  // updating a user
+  // update a user
   updateUser(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },

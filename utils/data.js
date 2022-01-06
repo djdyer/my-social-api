@@ -1,69 +1,136 @@
-// make this an object to include email for each user!
-
-const usernames = [
-  "C_los247",
-  "Daniel_s0n",
-  "mBarajas33",
-  "Adrian_Basa91",
-  "EddieDee123",
-  "Mr_Johnny_Chang",
-  "J0shClement5",
-  "CooperMAN55",
-  "Future_Street",
-  "Lil_Dave15",
-  "Enriquez2010",
-  "Thee_Benjie_Escobar",
-  "Adam_Gonz",
-  "Hernandezzz",
-  "WhoIsDorianHood",
-  "D_Jones23",
-  "robK2001",
-  "Zacharsha11",
-  "OldManMiller",
-  "SoSo_BrienMo",
-  "Its_Jasmin_Ortega",
-  "Ronaldinio87",
-  "Koreatown_MikePak",
-  "djYnot_Ramirez",
-  "HeavyD_Rivera",
-  "ChillestBlackest",
-  "R0b_Vel4",
-  "Eddie_Viramontes95",
-  "ideaTOreality",
-  "Umi_ETC",
+const users = [
+  {
+    username: "Carlos Avalos",
+    email: "carlos.avalos@gmail.com",
+  },
+  {
+    username: "Daniel Awad",
+    email: "dwad@yahoo.com",
+  },
+  {
+    username: "Mike Barajas",
+    email: "m.barajas@cox.net",
+  },
+  {
+    username: "Eddie Dominguez",
+    email: "eddie@bzerk.com",
+  },
+  {
+    username: "Johnny Chang",
+    email: "johnnyc123@hotmail.com",
+  },
+  {
+    username: "Josh Clements",
+    email: "josh.clements@gmail.com",
+  },
+  {
+    username: "Mike Cox",
+    email: "mike.c@futurestreet.com",
+  },
+  {
+    username: "Benjie Escobar",
+    email: "benjie@hotmail.com",
+  },
+  {
+    username: "Adam Gonzales",
+    email: "adam_g@clsc.com",
+  },
+  {
+    username: "Dillon Jones",
+    email: "dillon.jones@tripleseven.com",
+  },
+  {
+    username: "Brien Morgan",
+    email: "sosoanxious@gmail.com",
+  },
+  {
+    username: "Jasmine Ortega",
+    email: "jasmine@vans.com",
+  },
+  {
+    username: "Ronald Ortiz",
+    email: "ronald@thehundreds.com",
+  },
+  {
+    username: "Tony Ramirez",
+    email: "djynot@hotmail.com",
+  },
+  {
+    username: "David Rivera",
+    email: "david.rivera@stussy.com",
+  },
 ];
 
 const thoughts = [
-  "This damn pandemic has gone on long enough! Get vaccinated you idiots!",
-  "Dr. Fauci is a fraud, the virus is a biological weapon from China!",
-  "As long as there is money in politics, nothing will ever get done for the people",
-  "Regulation is killing private enterprise! I paid for this air!",
-  "Global warming is accellerating faster than scientists even predicted",
-  "If the planet is warming, then why is there still snow outside?",
-  "Check out this cute cat video OMG!",
-  "I just lost 20lbs with a zero-carb diet! Feelin' a bit dizzy though",
-  "This platform is much better than Facebook, who needs a Metaverse mansion anyway",
-  "Made a million dollars with NFTs last year, lost it all on a yellow ducky with sunnies on.",
-  "Free Julian Assange!",
-  "Hope everyone is having a great new year! Fingers crossed for the salvation of humanity and all! LuvU",
-  "Here's a way to turn your side hustle's side hustle into cash!",
-  "Name your best album of 2021 below..  GO!",
-  "Just landed the job with Google! Now to pay off that pesky 150k student loan.",
-  "Our webshop is now restocked with new items, link in bio!",
-  "Look at how awesome my dog is!",
-  "My son just conquered junior varsity westling as a freshman! Can't wait for next fall!",
-  "Hello friends! I'm moving this spring, so let's get togther soon! Miss you all.",
-  "I hope everyone is voting in the upcoming midterms!",
-  "Democracy is a lie, literally two wings of the same bird.",
-  "At this point it should be called the fight for $25",
-  "I say we abolish the minimum wage! If someone is willing to work for $5/hr, tell them to call me!",
-  "Soon we will see the first images from the James Webb space telescope! It's almost like time travel!",
-  "China is steadily becoming the next world superpower, so don't be surprised when they invade Taiwan for chips.",
-  "Recycling is broken in the United State, we need a new deal solution to plastic waste.",
-  "Got a computer science degree, then AI took my job.",
-  "Finally saved enough money for the worm farm!",
-  "With all the streaming services combined, it's bascially the same price as cable. Damn =(",
-  "We are trying to reach you about your car's extended warranty.",
+  {
+    thoughtText:
+      "This damn pandemic has gone on long enough! Get vaccinated you idiots!",
+    username: "David Rivera",
+  },
+  {
+    thoughtText:
+      "Dr. Fauci is a fraud, the virus is a biological weapon from China!",
+    username: "Tony Ramirez",
+  },
+  {
+    thoughtText:
+      "As long as there is money in politics, nothing will ever get done for my people",
+    username: "Ronald Ortiz",
+  },
+  {
+    thoughtText: "Check out this cute cat video OMG!",
+    username: "Jasmine Ortega",
+  },
+  {
+    thoughtText:
+      "This platform is much better than Facebook, who needs a Metaverse mansion anyway",
+    username: "Brien Morgan",
+  },
+  {
+    thoughtText: "Free Julian Assange!",
+    username: "Dillon Jones",
+  },
+  {
+    thoughtText:
+      "Hope everyone is having a great new year! Fingers crossed for the salvation of humanity and all!",
+    username: "Adam Gonzales",
+  },
+  {
+    thoughtText: "Name your best album of 2021 below..  GO!",
+    username: "Benjie Escobar",
+  },
+  {
+    thoughtText:
+      "Just landed the job with Google! Now to pay off that pesky 150k student loan.",
+    username: "Mike Cox",
+  },
+  {
+    thoughtText:
+      "Recycling is broken in the United State, we need a new deal solution to plastic waste",
+    username: "Josh Clements",
+  },
+  {
+    thoughtText: "Our webshop is now restocked with new items, link in bio!",
+    username: "Johnny Chang",
+  },
+  {
+    thoughtText: "Look at how awesome my dog is!",
+    username: "Mike Barajas",
+  },
+  {
+    thoughtText:
+      "Hello friends! I'm moving this spring, so let's get togther soon! Miss you all.",
+    username: "Carlos Avalos",
+  },
+  {
+    thoughtText: "At this point it should be called the fight for $25",
+    username: "Eddie Dominguez",
+  },
+  {
+    thoughtText:
+      "We are trying to reach you about your car's extended warranty.",
+    username: "Daniel Awad",
+  },
 ];
 
 // // Get a random item given an array
