@@ -41,7 +41,8 @@ SO THAT my website can handle large amounts of unstructured data
 Must first ... with the following commands:
 
 ```
-...
+npm i
+node utils/seed
 
 ```
 
@@ -50,7 +51,7 @@ Must first ... with the following commands:
 Application will then run in the command-line with:
 
 ```
-...
+node seed
 ```
 
 <br />
@@ -135,11 +136,11 @@ add and remove friends from a user’s friend list
 
 ## Collaboration
 
-Development efforts most often include guidance from Jedi Master:
-**Chris Champness**
+Development efforts included much deliberation with my fellow cohort:
+**Olsen Ogouchi**
 
-<a href= "https://github.com/CChampness"><img src=
-"https://avatars.githubusercontent.com/u/87551272?v=4" width="50px"/></a>
+<a href= "https://github.com/Chrisolsen1993"><img src=
+"https://avatars.githubusercontent.com/u/49103700?v=4" width="50px"/></a>
 
 <br />
 <br />
