@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 const reactionSchema = require("./Reaction");
+const moment = require("moment");
 
 const thoughtSchema = new Schema(
   {
@@ -16,21 +17,21 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      // get:
-      // - Use a getter method to format the timestamp on query
+      get: (createdAtVal) =>
+        moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
     },
     reactions: [reactionSchema],
   },
   {
     toJSON: {
-      getters: true,
+      virtuals: true,
     },
   }
 );
 
-// Virtual called `reactionCount` that retrieves the length of the thought's `reactions` array field on query.
+// Virtual to retrieve the length of a thought's reactions array field on query.
 thoughtSchema.virtual("reactionCount").get(function () {
-  return reactionCount.length;
+  return this.reactions.length;
 });
 
 // Initialize our User model
