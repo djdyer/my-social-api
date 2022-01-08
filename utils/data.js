@@ -96,7 +96,7 @@ const seedThoughts = [
     username: "Adam Gonzales",
   },
   {
-    thoughtText: "Name your best album of 2021 below..  GO!",
+    thoughtText: "Name your best album of 2021 below... GO!",
     username: "Benjie Escobar",
   },
   {
@@ -106,7 +106,7 @@ const seedThoughts = [
   },
   {
     thoughtText:
-      "Recycling is broken in the United State, we need a new deal solution to plastic waste",
+      "Recycling is broken in the United States, we need a new deal solution to plastic waste",
     username: "Josh Clements",
   },
   {

@@ -136,7 +136,7 @@ add and remove friends from a user’s friend list
 
 ## Collaboration
 
-Development efforts included much deliberation with my fellow cohort:
+Development efforts included much deliberation with my fellow cohort:  
 **Olsen Ogouchi**
 
 <a href= "https://github.com/Chrisolsen1993"><img src=
