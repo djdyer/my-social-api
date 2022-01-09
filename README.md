@@ -59,22 +59,14 @@ node seed
 
 ## Deployment
 
-[<img src="./assets/images/...png" height="80px">](https://.../)
+[<img src="./assets/images/insomnia.png" height="80px">](https://.../)
 
-<br />
 <br />
 
 **Employing the following technology:**
 
-[<img src="./assets/images/...svg" height="20px">](https://www.npmjs.com/package/nodejs-mvc)
-
-[Express.js](https://www.npmjs.com/package/express)
-
-MongoDB database, and the Mongoose ODM.
-
-[Mongoose](https://www.npmjs.com/package/mongoose)
-
-JavaScript date library of your choice or the native JavaScript `Date` object to format timestamps.
+[<img src="./assets/images/express.svg" height="20px">](https://www.npmjs.com/package/express) [<img src="./assets/images/mongodb.svg" height="20px">](https://docs.mongodb.com/) [<img src="./assets/images/mongoose.svg" height="20px">](https://www.npmjs.com/package/mongoose)  
+[<img src="./assets/images/insomnia_core.svg" height="20px">](https://www.npmjs.com/package/express) [<img src="./assets/images/moment.svg" height="20px">](https://momentjs.com/)
 
 <br />
 <br />
@@ -83,27 +75,16 @@ JavaScript date library of your choice or the native JavaScript `Date` object to
 
 Copyright (c) David Dyer [2021]
 
-[<img src="./assets/images/...svg" height="20px">](https://choosealicense.com/licenses/isc/)
+[<img src="./assets/images/isc.svg" height="20px">](https://choosealicense.com/licenses/isc/)
 
 <br />
 <br />
 
 ## Demo
 
-START SERVER
+[![](assets/demo/youtube.png)](https://youtu.be/v54KFOm51Ew)
 
-1. GET routes to return all users and all thoughts
-2. GET routes to return a single user and a single thought
-3. POST, PUT, and DELETE routes for users
-4. POST, PUT, and DELETE routes for thoughts
-5. POST and DELETE routes for reactions to thoughts
-6. POST and DELETE routes for a user’s friend list
-
-BONUS: DELETE a user's associated thoughts when the user is deleted.
-
-[![](assets/screenshots/...png)](https://youtu.be/...)
-
-<img src="./assets/screenshots/...png" width = "600">
+<img src="./assets/demo/testing_sc.png" width = "600">
 
 <br />
 <br />
