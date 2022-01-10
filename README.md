@@ -108,7 +108,6 @@ to successfully create and delete reactions to thoughts
 
 When testing API POST and DELETE routes in Insomnia, the user is able
 add and remove friends from a user’s friend list
-
 ```
 
 <br />
@@ -125,5 +124,6 @@ Development efforts included much deliberation with my fellow cohort:
 <br />
 <br />
 <br />
-Let's build something!  
+Let's build something!
+
 🛠️
