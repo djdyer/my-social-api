@@ -38,7 +38,7 @@ SO THAT my website can handle large amounts of unstructured data
 
 ⬇️
 
-Must first ... with the following commands:
+Must first initialize with the following commands:
 
 ```
 npm i
@@ -51,7 +51,7 @@ node utils/seed
 Application will then run in the command-line with:
 
 ```
-node seed
+node server
 ```
 
 <br />
@@ -73,7 +73,7 @@ node seed
 
 ## License
 
-Copyright (c) David Dyer [2021]
+Copyright (c) David Dyer [2022]
 
 [<img src="./assets/images/isc.svg" height="20px">](https://choosealicense.com/licenses/isc/)
 
@@ -109,7 +109,6 @@ to successfully create and delete reactions to thoughts
 When testing API POST and DELETE routes in Insomnia, the user is able
 add and remove friends from a user’s friend list
 
-
 ```
 
 <br />
@@ -126,4 +125,5 @@ Development efforts included much deliberation with my fellow cohort:
 <br />
 <br />
 <br />
-Let's build something!
+Let's build something!  
+🛠️
